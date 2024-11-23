@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Apple Watch",
       "price": "4700",
-      "quantity": "500",
+      "quantity": 300,
       "selected": true,
       "available": true
     },
@@ -20,9 +20,17 @@
       "name": "Apple Watch ",
       "price": "120",
       "quantity": "12",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 3
+    },
+    {
+      "name": "hhh hello",
+      "price": 3,
+      "quantity": 4,
+      "selected": true,
+      "available": true,
+      "id": 4
     }
   ]
 }
