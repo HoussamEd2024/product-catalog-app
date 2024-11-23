@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Computer",
+      "name": "Apple Watch",
       "price": "4700",
       "quantity": "500",
       "selected": true,
@@ -17,12 +17,12 @@
       "available": false
     },
     {
-      "id": 3,
-      "name": "Smart watch",
-      "price": "1230",
-      "quantity": "23",
+      "name": "Apple Watch ",
+      "price": "120",
+      "quantity": "12",
       "selected": true,
-      "available": true
+      "available": true,
+      "id": 3
     }
   ]
 }

@@ -9,7 +9,7 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import {ProductsNavBarComponent} from "./components/products/products-nav-bar/products-nav-bar.component";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductItemComponent } from './components/products/product-item/product-item.component';
 import {HttpClientModule} from "@angular/common/http";
 
@@ -28,7 +28,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
