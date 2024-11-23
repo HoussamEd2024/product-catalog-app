@@ -1,0 +1,24 @@
+
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Selected</th>
+    <th>Available</th>
+    <th>Actions</th>
+  </tr>
+
+  <ng-container *ngFor="let product of products">
+    <tr>
+      <app-product-item
+        [product]="product"
+        (selectProduct)="selectProduct.emit($event)"
+        (deleteProduct)="deleteProduct.emit($event)"
+        (editProduct)="editProduct.emit($event)"
+      ></app-product-item>
+    </tr>
+  </ng-container>
+</table>

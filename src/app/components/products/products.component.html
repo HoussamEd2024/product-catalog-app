@@ -1,0 +1,22 @@
+<app-products-nav-bar
+  (filterProducts)="handleFilterProducts($event)"
+  (searchProducts)="handleSearchProducts($event)"
+  (addNewProduct)="handleAddNewProduct()"
+></app-products-nav-bar>
+
+<ng-container *ngIf="products$ | async as result" [ngSwitch]="result.dataState">
+  <ng-container *ngSwitchCase="DataStateEnum.LOADING">Loading...</ng-container>
+  <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+    <div class="text-danger">{{ result.errorMessage }}</div>
+  </ng-container>
+  <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+    <ng-container *ngIf="result.data">
+      <app-products-list
+        [products]="result.data"
+        (selectProduct)="handleSelectProduct($event)"
+        (deleteProduct)="handleDeleteProduct($event)"
+        (editProduct)="handleEditProduct($event)"
+      ></app-products-list>
+    </ng-container>
+  </ng-container>
+</ng-container>
